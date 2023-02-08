@@ -12,13 +12,13 @@
   --very-dark-blue: hsl(212, 21%, 14%);
   --dark-grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
-  --paragraph: 14px;
+  --paragraph: 1.4rem;
 }
 
 html {
   font-size: 62.5%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   html {
     font-size: 50%;
   }
@@ -30,18 +30,18 @@ body {
 }
 
 .card {
-  width: 640px;
-  height: 500px;
+  width: 64rem;
+  height: 49rem;
   margin: 20vh auto;
   border-radius: 16px;
   overflow: hidden;
   display: flex;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .card {
     flex-direction: column;
     width: 90vw;
-    height: 90vh;
+    height: 100vh;
     margin: 2.5rem auto;
   }
 }
@@ -49,7 +49,7 @@ body {
   width: 50%;
   max-height: 100%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .card__img--desktop {
     display: none;
   }
@@ -57,7 +57,7 @@ body {
 .card__img--mobile {
   display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .card__img--mobile {
     display: inline-block;
     max-width: 100%;
@@ -69,7 +69,7 @@ body {
   max-height: 100%;
   background-color: var(--white);
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .card__text-box {
     width: 100%;
     max-height: 100%;
@@ -85,6 +85,7 @@ body {
   font-weight: 500;
 }
 .card__title {
+  max-width: 80%;
   font-size: 3.2rem;
   padding: 0 2.8rem 2.8rem;
   line-height: 3.8rem;
@@ -92,8 +93,10 @@ body {
   font-weight: 700;
   color: var(--very-dark-blue);
 }
-.card__title--fix {
-  display: block;
+@media screen and (max-width: 400px) {
+  .card__title {
+    line-height: 3.4rem;
+  }
 }
 .card__descr {
   font-family: "Montserrat", sans-serif;
@@ -102,6 +105,11 @@ body {
   color: var(--dark-grayish-blue);
   padding: 0 6rem 2.8rem 2.8rem;
   line-height: 2.2rem;
+}
+@media screen and (max-width: 400px) {
+  .card__descr {
+    max-width: 88%;
+  }
 }
 .card__price {
   font-family: "fraunces", sans-serif;
@@ -121,10 +129,9 @@ body {
   text-decoration: line-through;
 }
 .card__btn {
-  display: block;
-  margin-top: 2.8rem;
-  margin-left: 2.8rem;
-  padding: 2rem 8rem;
+  display: inline-block;
+  margin: 2.8rem;
+  padding: 1.6rem 6.6rem;
   border-radius: 10px;
   border: none;
   font-family: "Montserrat", sans-serif;
