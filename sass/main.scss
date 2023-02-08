@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  // Colors
+  //Primary:
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  //Secondary:
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  // Font Size
+  --paragraph: 14px;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  @media screen and (max-width: 600px) {
+    font-size: 50%; // 1rem = 8px
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--cream);
+}
+
+.card {
+  width: 640px;
+  height: 500px;
+  margin: 20vh auto;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    width: 90vw;
+    height: 90vh;
+    margin: 2.5rem auto;
+  }
+
+  &__img {
+    &--desktop {
+      width: 50%;
+      max-height: 100%;
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+    &--mobile {
+      display: none;
+      @media screen and (max-width: 600px) {
+        display: inline-block;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+  &__text-box {
+    width: 50%;
+    max-height: 100%;
+    background-color: var(--white);
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__header {
+    text-transform: uppercase;
+    font-size: var(--paragraph);
+    letter-spacing: 0.8rem;
+    padding: 2.8rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--dark-grayish-blue);
+    font-weight: 500;
+  }
+  &__title {
+    font-size: 3.2rem;
+    padding: 0 2.8rem 2.8rem;
+    line-height: 3.8rem;
+    font-family: "fraunces", sans-serif;
+    font-weight: 700;
+    color: var(--very-dark-blue);
+    &--fix {
+      display: block;
+    }
+  }
+
+  &__descr {
+    font-family: "Montserrat", sans-serif;
+    font-size: var(--paragraph);
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    padding: 0 6rem 2.8rem 2.8rem;
+    line-height: 2.2rem;
+  }
+
+  &__price {
+    font-family: "fraunces", sans-serif;
+    font-size: 3.2rem;
+    color: var(--dark-cyan);
+    font-weight: 700;
+    padding: 0 2.8rem 2.8rem;
+    position: relative;
+
+    &--discount {
+      color: var(--dark-grayish-blue);
+      font-size: var(--paragraph);
+      font-family: "Montserrat", sans-serif;
+      position: absolute;
+      margin-top: 1.4rem;
+      margin-right: 0.5rem;
+      text-decoration: line-through;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-top: 2.8rem;
+    margin-left: 2.8rem;
+    padding: 2rem 8rem;
+    border-radius: 10px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    color: var(--white);
+    font-size: var(--paragraph);
+    background-color: var(--dark-cyan);
+    cursor: pointer;
+  }
+  &__btn:hover {
+    background-color: var(--very-dark-blue);
+  }
+}
+.icon {
+  margin-right: 6px;
+}

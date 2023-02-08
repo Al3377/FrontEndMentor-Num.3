@@ -1,0 +1,22 @@
+{
+  "name": "frontendmentor-num.3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Al3377/FrontEndMentor-Num.3.git"
+  },
+  "author": "Alen Vitas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Al3377/FrontEndMentor-Num.3/issues"
+  },
+  "homepage": "https://github.com/Al3377/FrontEndMentor-Num.3#readme",
+  "devDependencies": {
+    "sass": "^1.58.0"
+  }
+}
